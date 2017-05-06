@@ -7,7 +7,7 @@
 //
 
 #import "XSViewController.h"
-#import <XSAlertView/XSAlertView-umbrella.h>
+
 @interface XSViewController ()
 
 @end

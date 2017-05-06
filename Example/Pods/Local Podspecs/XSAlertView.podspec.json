@@ -1,18 +1,18 @@
 {
   "name": "XSAlertView",
   "version": "0.1.0",
-  "summary": "A short description of XSAlertView.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/邵晓飞/XSAlertView",
+  "summary": "A simple Alert View of XSAlertView.",
+  "description": "A simple Alert View of XSAlertView.\nIt is very easy to use!",
+  "homepage": "https://github.com/XaoflySho/XSAlertView",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "邵晓飞": "shaoxiaof@hotmail.com"
+    "XaoflySho": "shaoxiaof@hotmail.com"
   },
   "source": {
-    "git": "https://github.com/邵晓飞/XSAlertView.git",
+    "git": "https://github.com/XaoflySho/XSAlertView.git",
     "tag": "0.1.0"
   },
   "platforms": {

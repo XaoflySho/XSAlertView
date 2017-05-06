@@ -28,7 +28,7 @@ SPEC CHECKSUMS:
   Expecta+Snapshots: dcff217eef506dabd6dfdc7864ea2da321fafbb8
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
-  XSAlertView: 8ea83cdce9e43d36b8881e523889a7553863bb47
+  XSAlertView: a9a80ece548c2cfab99172fbb69b13f382ceaf3d
 
 PODFILE CHECKSUM: 9bfdc8f6fe7db4011a97548491917c6606140cb0
 
