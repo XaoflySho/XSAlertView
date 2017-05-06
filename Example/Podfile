@@ -1,0 +1,14 @@
+use_frameworks!
+
+target 'XSAlertView_Example' do
+  pod 'XSAlertView', :path => '../'
+
+  target 'XSAlertView_Tests' do
+    inherit! :search_paths
+
+    pod 'Specta'
+  pod 'Expecta'
+  pod 'FBSnapshotTestCase'
+  pod 'Expecta+Snapshots'
+  end
+end
