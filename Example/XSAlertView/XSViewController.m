@@ -7,8 +7,13 @@
 //
 
 #import "XSViewController.h"
+#import <XSAlertView/XSAlertView.h>
 
-@interface XSViewController ()
+@interface XSViewController () <XSAlertViewDelegate>
+
+@property (nonatomic, weak) IBOutlet UISegmentedControl *segmented;
+
+@property (nonatomic, weak) IBOutlet UITextField *textField;
 
 @end
 
@@ -18,6 +23,38 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+}
+
+- (IBAction)buttonClick:(id)sender {
+    
+    XSAlertView *alertView = [[XSAlertView alloc]initWithXSAlertViewStyle:(int)self.segmented.selectedSegmentIndex Message:_textField.text CancelButtonTitle:nil OtherButtonTitles:nil];
+    alertView.delegate = self;
+    [alertView viewShow];
+    
+}
+
+- (IBAction)button2:(id)sender {
+    XSAlertView *alertView = [[XSAlertView alloc]initWithXSAlertViewStyle:(int)self.segmented.selectedSegmentIndex Message:_textField.text CancelButtonTitle:@"OK" OtherButtonTitles:nil];
+    alertView.delegate = self;
+    [alertView viewShow];
+}
+
+- (IBAction)button3:(id)sender {
+    XSAlertView *alertView = [[XSAlertView alloc]initWithXSAlertViewStyle:(int)self.segmented.selectedSegmentIndex Message:_textField.text CancelButtonTitle:@"OK" OtherButtonTitles:@[@"Action One",@"Action Two",@"Action Three"]];
+    alertView.delegate = self;
+    [alertView viewShow];
+    
+}
+
+- (void)XSAlertView:(XSAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    NSLog(@"%ld",(long)buttonIndex);
+}
+
+- (void)XSAlertViewCancel:(XSAlertView *)alertView {
+    
+    NSLog(@"~~~~~~");
     
 }
 
