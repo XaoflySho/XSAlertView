@@ -7,7 +7,7 @@
 //
 
 #import "XSViewController.h"
-
+#import <XSAlertView/XSAlertView-umbrella.h>
 @interface XSViewController ()
 
 @end
@@ -18,6 +18,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 - (void)didReceiveMemoryWarning
