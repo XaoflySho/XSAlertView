@@ -49,12 +49,12 @@
 
 - (void)XSAlertView:(XSAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     
-    NSLog(@"%ld",(long)buttonIndex);
+    NSLog(@"ClickedButtonIndex:%ld",(long)buttonIndex);
 }
 
 - (void)XSAlertViewCancel:(XSAlertView *)alertView {
     
-    NSLog(@"~~~~~~");
+    NSLog(@"XSAlertViewCancel");
     
 }
 

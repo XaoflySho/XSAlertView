@@ -109,8 +109,10 @@
     messageLabel.textAlignment = NSTextAlignmentCenter;
     messageLabel.font = [UIFont systemFontOfSize:15.0];
     messageLabel.backgroundColor = [UIColor clearColor];
+    messageLabel.userInteractionEnabled = NO;
     
     UIView *labelBackView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.textSize.width + 24, self.textSize.height + 24)];
+    labelBackView.userInteractionEnabled = NO;
     
     [self viewSetStyleWithView:labelBackView];
     
@@ -161,6 +163,9 @@
     UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
     
     [window addSubview:self.backView];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap:)];
+    [self.backView addGestureRecognizer:tap];
     
 }
 
@@ -221,6 +226,22 @@
     if ([_delegate respondsToSelector:@selector(XSAlertViewCancel:)]) {
         [_delegate XSAlertViewCancel:self];
     }
+    
+    [self viewHide];
+    
+}
+
+- (void)tap:(UITapGestureRecognizer *)sender {
+    
+    if ([_delegate respondsToSelector:@selector(XSAlertViewCancel:)]) {
+        [_delegate XSAlertViewCancel:self];
+    }
+    
+    [self viewHide];
+    
+}
+
+- (void)viewHide {
     
     [UIView animateWithDuration:0.3
                           delay:0
